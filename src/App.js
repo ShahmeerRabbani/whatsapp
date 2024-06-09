@@ -9,7 +9,7 @@ function App() {
     setChatDisplay(true);
   };
 
-  const [selectedMessage, setSelectedMessage] = useState(null);
+  const [selectedMessage, setSelectedMessage] = useState('');
 
   const handleSelectedMessage = (message) => {
     setSelectedMessage(message);
@@ -32,7 +32,7 @@ function App() {
           selectedMessage={selectedMessage}
           handleShowProfile={handleShowProfile}
         />
-        <ProfileInformation isProfileShow = {profileInformation} selectedMessage={selectedMessage}/>
+        <ProfileInformation isProfileShow = {profileInformation} selectedMessage={selectedMessage} handleShowProfile={handleShowProfile}/>
       </div>
     </>
   );

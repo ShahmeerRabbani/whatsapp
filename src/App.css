@@ -3,6 +3,20 @@
   margin: 0%;
 }
 
+:root{
+  --primary-color: #f0f2f5;
+  --secondary-color: #fff;
+  --tertiary-color: #54656f;
+  --quaternary-color: #EA0038;
+  --quinary-color: #f5f6f6;
+  
+  /* --primary-color: #202C33;
+  --secondary-color: #111B21;
+  --tertiary-color: #AEBAC1;
+  --quaternary-color: #F15C6D;
+  --quinary-color: #2A3942; */
+}
+
 .App {
   height: 100vh;
   width: 100vw;
@@ -18,13 +32,14 @@
   display: flex;
   min-width: 470px;
   height: 100vh;
+  background-color: var(--secondary-color);
   scroll-behavior: smooth;
 }
 
 /* ---------------- Side Contents Settings------------------ */
 
 .Settings {
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   min-width: 60px;
@@ -44,10 +59,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #54656F;
+  color: var(--tertiary-color);
 }
 
-.Chat, .Group, .Status, 
+.Chat, .Group, .StatusBtn, 
 .Channel, .Archive, .StarMessage, .main_setting, .profile_setting{
   width: 40px;
   height: 40px;
@@ -58,10 +73,10 @@
   border-radius: 50%;
 }
 
-.Chat:hover, .Group:hover, .Status:hover, 
+.Chat:hover, .Group:hover, .StatusBtn:hover, 
 .Channel:hover, .Archive:hover, .StarMessage:hover,
  .main_setting:hover, .NewChat:hover, .Menu:hover{
-   background-color: #c0c2c4
+   background-color: var(--quinary-color)
 }
 
 .lower_settings{
@@ -79,7 +94,7 @@
   width: 30px;
   overflow: hidden;
   object-fit: cover;
-  outline: 1px solid #c0c2c4;
+  outline: 1px solid var(--quinary-color);
   outline-offset: 3px;
 }
 
@@ -88,6 +103,8 @@
 .Main_SideDisplay {
   flex: 7;
   height: 100vh;
+  border-right: 1px solid #D9DBDF;
+  overflow: hidden;
 }
 
 .SideChat{
@@ -114,7 +131,7 @@
   justify-content: space-between;
 }
 
-.NewChat, .Menu{
+.NewChat, .Menu, .meta_ai{
   width: 40px;
   height: 40px;
   display: flex;
@@ -122,7 +139,7 @@
   justify-content: center;
   cursor: pointer;
   border-radius: 50%;
-  color: #54656F;
+  color: var(--tertiary-color);
 }
 
 .searchBar{
@@ -137,7 +154,7 @@
   width: 85%;
   height: 35px;
   border-radius: 8px;
-  background-color: #F0F2F5;
+  background-color: var(--quinary-color);
 }
 
 .Search_Icon{
@@ -180,7 +197,7 @@
   overflow-x: hidden;
 }
 .ChatRow_Child::-webkit-scrollbar-thumb{
-  background-color: #CED0D1;
+  background-color: var(--primary-color);
 }
 
 .ChatBox{
@@ -191,7 +208,7 @@
 }
 
 .ChatBox:hover{
-  background-color: #f5f6f6;
+  background-color: var(--quinary-color);
 }
 
 .user_dp{
@@ -205,7 +222,6 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  background-color: #E9EDEF;
   overflow: hidden;
   object-fit: cover;
   display: flex;
@@ -238,7 +254,7 @@
   height: 20px;
   display: flex;
   font-size: 22px;
-  background-color: #f5f6f6;
+  background-color: var(--quinary-color);
   transform: translateX(30px);
   transition: 0.1s ease;
 }
@@ -246,6 +262,419 @@
 .ChatBox:hover .dropdown_arrow{
   transform: translateX(5px);
 }
+
+/* ---------------- Communities -------------------- */
+.community_Main{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Communities{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* -------------------Channel ---------------------------- */
+
+.channel_main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0px 25px;
+}
+
+.upper_channel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+  flex: 1;
+}
+
+.lower_channel{
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  margin-top: 30px;
+}
+
+.channel_box{
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.channel_box:hover{
+  background-color: var(--quinary-color);
+}
+
+.channel_imageParent{
+  flex: 1;
+  
+}
+
+.channel_image{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #EA0038;
+  overflow: hidden;
+}
+
+.channel_names{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 5;
+  margin-left: 15px;
+}
+
+.channel_plus{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* ------------------Status ---------------------- */
+
+.Main_Status{
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Status_header{
+  /* position: absolute; */
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.Status_body{
+  height: calc(100% - 60px);
+  width: 100%;
+  background-color: var(--primary-color);
+  overflow: auto;
+}
+
+.My_Status{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  background-color: var(--secondary-color);
+}
+
+.my_Status_Display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.my_Status_Image{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+}
+
+.my_Status_text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 5;
+}
+
+.Others_status{
+  min-height: calc(100% - 80px);
+  width: 100%;
+  margin-top: 10px;
+  background-color: var(--secondary-color);
+  padding-bottom: 50px;
+}
+
+.Others_updates{
+  height: 70px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.Others_updates:hover{
+  background-color: var(--quinary-color);
+}
+
+.Others_display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+
+
+.Others_Image{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  outline: 2px dashed #017561;
+  outline-offset: 2px;
+}
+
+.Others_text{
+  border-top: 1px solid #E9EDEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 5;
+}
+
+
+/* ---------------- Profile Page */
+
+.Main_Profile_Page{
+  height: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.Main_profile_header{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+.Main_profile_imageDiv{
+  display: flex;
+  height: 260px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_imageDiv{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #54656f;
+
+}
+
+.Main_profile_nameDiv{
+  height: 90px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.name_title{
+  flex: 1;
+  display: flex;
+  color: #017561;
+  font-size: 14px;
+  padding-left: 30px;
+  align-items: center;
+}
+
+.name_input{
+  flex: 2;
+  display: flex;
+  padding:0 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Main_profile_about{
+  height: 100px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.About_title{
+  flex: 1;
+  display: flex;
+  color: #017561;
+  font-size: 14px;
+  padding-left: 30px;
+  align-items: center;
+}
+
+.About_input{
+  flex: 2;
+  display: flex;
+  padding:0 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------- Main Setting--------------------- */
+
+.Main_Settings_page{
+  height: 100vh;
+  display: flex;
+  position: relative;
+  /* flex-direction: column; */
+  /* overflow: hidden; */
+  }
+  
+  .Settings_container{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.Main_settings_header{
+  height: 110px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.Settings_title{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  
+}
+
+.Settings_SearchInput{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Settings_search{
+  display: flex;
+  width: 92%;
+  height: 35px;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+}
+
+.Settings_input{
+  width: 80%;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.Settings_Option{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 110px);
+  overflow-y: auto;
+}
+
+.Settings_Option::-webkit-scrollbar{
+  width: 0px;
+}
+
+.Settings_firstLine{
+  height: 100px;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.Settings_firstLine:hover{
+  background-color: #f0f2f5;
+}
+
+.Settings_FirstLine_profile{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.Settings_Dp{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+}
+.Settings_FirstLine_About{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 3;
+}
+
+.Settings_SecondLine{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.Settings_SecondLine:hover{
+  background-color: #f0f2f5;
+}
+
+
+.Settings_SecondLine_icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+}
+
+.Settings_SecondLine_event{
+  display: flex;
+  align-items: center;
+  flex: 5;
+  font-size: 18px;
+  border-bottom: 1px solid #D9DBDF;
+}
+
+/* ----------------- Account Page ----------------- */
+
+.Account_Page{
+  height: 100vh;
+  background-color: #017561;
+}
+
+.Second_Setting_Page{
+  width: 100%;
+  height: 100%;
+  background-color: #017561;
+  position: absolute;
+  transform: translateX(100%);
+}
+/* 
+.slide-in {
+  transform: translateX(0%);
+}
+
+.slide-out {
+  transform: translateX(-100%);
+} */
 
 /* ---------------- Main Display Content ------------------ */
 
@@ -258,7 +687,7 @@
 .front_display {
   height: 100%;
   width: 100%;
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -278,7 +707,7 @@
 
 .store_btn{
   background-color: #017561;
-  color: white;
+  color: var(--secondary-color);
   font-size: 14px;
   font-weight: 500;
   padding: 11px 30px;
@@ -296,7 +725,7 @@
   width: 230px;
   top: 60px;  
   right: 20px;
-  background-color: white;
+  background-color: var(--secondary-color);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -314,12 +743,12 @@
   align-items: center;
   height: 40px;
   cursor: pointer;
-  color: #54656F;
+  color: var(--tertiary-color);
   font-size: 14.5px;
 }
 
 .chatSetting_box:hover{
-  background-color: #f5f6f6;
+  background-color: var(--quinary-color);
 }
 
 /* ----------- Chat Display ---------------- */
@@ -337,7 +766,7 @@ article svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #54656F;
+  color: var(--tertiary-color);
 }
 
 article::-webkit-scrollbar{
@@ -346,7 +775,7 @@ article::-webkit-scrollbar{
 }
 
 article::-webkit-scrollbar-thumb{
-  background-color: #CED0D1;
+  background-color: var(--quinary-color);
 }
 
 header{
@@ -354,7 +783,7 @@ header{
   padding: 0 20px;
   display: flex;
   align-items: center;
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   z-index: 99;
 }
 
@@ -411,12 +840,13 @@ header{
 main{
   flex: 8;
   z-index: 99;
+  overflow: auto;
 }
 
 
 footer{
   flex: 1;
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   bottom: 0;
   display: flex;
   z-index: 99;
@@ -441,6 +871,7 @@ footer{
 }
 
 .foot_input input{
+  background-color: var(--secondary-color);
   display: flex;
   width: -webkit-fill-available;
   border: none;
@@ -463,24 +894,34 @@ footer{
 .profile_info{
   width: 440px;
   height: 100vh;
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
+
+.profile_info::-webkit-scrollbar{
+  width: 8px;
+}
+.profile_info::-webkit-scrollbar-thumb{
+  background-color: var(--quinary-color);
+}
+
+
 .profile_info svg{
-  color: #667781;
+  color: var(--tertiary-color);
 }
 
 .close_profile{
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
-  color: #54656F;
+  color: var(--tertiary-color);
   height: 60px;
   width: 100%;
-  background-color: white;
+  background-color: var(--secondary-color);
 }
 
 .close_button{
@@ -497,9 +938,9 @@ footer{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 330px;
+  min-height: 330px;
   width: 100%;
-  background-color: white;
+  background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.15) 1.9px 1.9px 4px;
 }
 
@@ -507,7 +948,7 @@ footer{
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background-color: #F0F2F5;
+  background-color: var(--primary-color);
   overflow: hidden;
   object-fit: cover;
   display: flex;
@@ -517,9 +958,9 @@ footer{
 .profile_about{
   display: flex;
   flex-direction: column;
-  height: 90px;
+  min-height: 90px;
   width: 100%;
-  background-color: white;
+  background-color: var(--secondary-color);
   margin-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.9px 1.9px 4px;
 }
@@ -530,7 +971,7 @@ footer{
   font-size: 16px;
   align-items: center;
   padding: 0 30px;
-  color: #54656F;
+  color: var(--tertiary-color);
   font-weight: 400;
 }
 
@@ -545,9 +986,45 @@ footer{
 .profile_media-links{
   display: flex;
   align-items: center;
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   margin-top: 10px;
-  background-color: white;
+  background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.15) 1.9px 1.9px 4px;
+}
+
+.profile_events{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  min-height: 420px;
+  width: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.9px 1.9px 4px;
+}
+
+.profile_starMessage{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.profile_delete{
+  height: 60px;
+  width: 100%;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  color: var(--quaternary-color);
+  cursor: pointer;
+}
+
+.profile_delete svg{
+  color: var(--quaternary-color);
+}
+
+.profile_delete:hover{
+  background-color: var(--quinary-color);
 }

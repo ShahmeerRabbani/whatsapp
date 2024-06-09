@@ -20,7 +20,7 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
             <header>
               <div className="header_Dp">
                 <img
-                  src={profile}
+                  src={selectedMessage.image}
                   style={{
                     objectFit: "cover",
                     height: "-webkit-fill-available",

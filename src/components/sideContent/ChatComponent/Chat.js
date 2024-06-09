@@ -1,152 +1,9 @@
 import React from 'react';
-import { profile } from "../../../images";
 import { IoIosArrowDown } from "react-icons/io";
+function Chat({handleDisplay, onMessageClick, fakeChatData}) {
 
-function Chat({handleDisplay, onMessageClick}) {
 
-
-    const fakeChatData = [
-        {
-        id: 1,
-        name: 'Shahmeer',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 2,
-        name: 'Haris',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 3,
-        name: 'Yasir',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 4,
-        name: 'Hashir',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 5,
-        name: 'Hammad',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 6,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 7,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 8,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 9,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 10,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 11,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 12,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 13,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 14,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 15,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 16,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 17,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 18,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 19,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-        {
-        id: 20,
-        name: 'User Name',
-        message: 'Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!',
-        time: 'Saturday',
-        image: profile,
-      },
-    ]
+  
 
     return ( 
         <>
@@ -161,10 +18,14 @@ function Chat({handleDisplay, onMessageClick}) {
             <div
               style={{
                 display: "flex",
-                width: "85px",
+                width: "120px",
+                alignItems: 'center',
                 justifyContent: "space-around",
               }}
             >
+              <div className='meta_ai' title='Meta AI'>
+                <img style={{height: 20, width: 20, }} src="https://static.whatsapp.net/rsrc.php/v3/ye/r/W2MDyeo0zkf.png"/>
+              </div>
               <div className="NewChat">
                  
                   <svg

@@ -1,5 +1,5 @@
 import React from 'react';
-import { whatsAppComputer } from '../../../images';
+import { updateComputer, whatsAppComputer } from '../../../images';
 import { FaLock } from 'react-icons/fa6';
 
 function FirstDisplay() {
@@ -30,7 +30,7 @@ function FirstDisplay() {
          <div className="front_display">
             <div className="computerImage">
               <img
-                src={whatsAppComputer}
+                src={updateComputer}
                 style={{
                   height: "auto",
                   width: "-webkit-fill-available",
