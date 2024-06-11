@@ -1,9 +1,4 @@
-import React from "react";
-
-function CommunityImage() {
-  return (
-    <>
-      <svg
+<svg
         viewBox="0 0 360 200"
         height="200"
         width="360"
@@ -256,8 +251,3 @@ function CommunityImage() {
           </clipPath>
         </defs>
       </svg>
-    </>
-  );
-}
-
-export default CommunityImage;

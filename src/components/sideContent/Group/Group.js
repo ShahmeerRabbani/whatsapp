@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CommunityImage from "./communityImage";
+import { CommunityImageIcon, RightArrow } from "../../Assets";
 
 function Community() {
   return (
@@ -17,7 +17,7 @@ function Community() {
         </span>
         <div className="Communities">
           <span>
-            <CommunityImage />
+            <CommunityImageIcon />
           </span>
           <h2 style={{ marginTop: 25 }}>Stay connected with a community</h2>
           <p
@@ -38,23 +38,7 @@ function Community() {
               See example communities
             </a>
             <span style={{ marginLeft: 5 }}>
-              <svg
-                viewBox="0 0 10 21"
-                height="21"
-                width="10"
-                preserveAspectRatio="xMidYMid meet"
-                style={{ color: "#00A884" }}
-                version="1.1"
-                x="0px"
-                y="0px"
-                enableBackground="new 0 0 10 21"
-              >
-                <title>chevron-right-alt</title>
-                <path
-                  fill="currentColor"
-                  d="M1,15.75l5.2-5.2L1,5.35l1.5-1.5l6.5,6.7l-6.6,6.6L1,15.75z"
-                ></path>
-              </svg>
+              <RightArrow style={{color: '#00A884'}}/>
             </span>
           </div>
           <button className="store_btn" style={{ marginTop: 20 }}>

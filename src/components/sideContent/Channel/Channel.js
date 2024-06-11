@@ -1,6 +1,7 @@
 import React from "react";
 import profile from '../../../images/profile.jpeg'
 import { MarkZuckerberg, callOfDuty, UEFA, worldHealth, Billie } from "../../../images";
+import { PlusIcon } from "../../Assets";
 
 function Channel() {
   const channelData = [
@@ -10,24 +11,7 @@ function Channel() {
       channelName: "Call Of Duty",
       followers: "7.8M followers",
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ color: "#00A884" }}
-          version="1.1"
-          x="0px"
-          y="0px"
-          enableBackground="new 0 0 24 24"
-          shapeRendering="crispEdges"
-        >
-          <title>plus-large</title>
-          <path
-            fill="currentColor"
-            d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-          ></path>{" "}
-        </svg>
+        <PlusIcon style={{color: '#00A884'}}/>
       ),
     },
     {
@@ -36,24 +20,7 @@ function Channel() {
       channelName: "Mark Zuckerberg",
       followers: "17.5M followers",
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ color: "#00A884" }}
-          version="1.1"
-          x="0px"
-          y="0px"
-          enableBackground="new 0 0 24 24"
-          shapeRendering="crispEdges"
-        >
-          <title>plus-large</title>
-          <path
-            fill="currentColor"
-            d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-          ></path>{" "}
-        </svg>
+        <PlusIcon style={{color: '#00A884'}}/>
       ),
     },
     {
@@ -62,24 +29,7 @@ function Channel() {
       channelName: "World Health Organization",
       followers: "156.4M followers",
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ color: "#00A884" }}
-          version="1.1"
-          x="0px"
-          y="0px"
-          enableBackground="new 0 0 24 24"
-          shapeRendering="crispEdges"
-        >
-          <title>plus-large</title>
-          <path
-            fill="currentColor"
-            d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-          ></path>{" "}
-        </svg>
+        <PlusIcon style={{color: '#00A884'}}/>
       ),
     },
     {
@@ -88,24 +38,7 @@ function Channel() {
       channelName: "UEFA EURO 2024",
       followers: "5.1M followers",
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ color: "#00A884" }}
-          version="1.1"
-          x="0px"
-          y="0px"
-          enableBackground="new 0 0 24 24"
-          shapeRendering="crispEdges"
-        >
-          <title>plus-large</title>
-          <path
-            fill="currentColor"
-            d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-          ></path>{" "}
-        </svg>
+        <PlusIcon style={{color: '#00A884'}}/>
       ),
     },
     {
@@ -114,24 +47,7 @@ function Channel() {
       channelName: "Billie Eilish Home",
       followers: "3.6M followers",
       icon: (
-        <svg
-          viewBox="0 0 24 24"
-          height="24"
-          width="24"
-          preserveAspectRatio="xMidYMid meet"
-          style={{ color: "#00A884" }}
-          version="1.1"
-          x="0px"
-          y="0px"
-          enableBackground="new 0 0 24 24"
-          shapeRendering="crispEdges"
-        >
-          <title>plus-large</title>
-          <path
-            fill="currentColor"
-            d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-          ></path>{" "}
-        </svg>
+        <PlusIcon style={{color: '#00A884'}}/>
       ),
     },
   ];
@@ -150,24 +66,7 @@ function Channel() {
           >
             <span style={{ fontSize: 22, fontWeight: 700 }}>Channels</span>
             <span style={{ cursor: "pointer" }}>
-              <svg
-                viewBox="0 0 24 24"
-                height="24"
-                width="24"
-                preserveAspectRatio="xMidYMid meet"
-                class=""
-                version="1.1"
-                x="0px"
-                y="0px"
-                enableBackground="new 0 0 24 24"
-                shapeRendering="crispEdges"
-              >
-                <title>plus-large</title>
-                <path
-                  fill="currentColor"
-                  d="M19,13h-6v6h-2v-6H5v-2h6V5h2v6h6V13z"
-                ></path>
-              </svg>
+              <PlusIcon/>
             </span>
           </div>
           <span style={{ fontSize: 20 }}>

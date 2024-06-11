@@ -11,7 +11,6 @@ import ProfileInformation from "./displayContent/profileInfo/ProfileInfo";
 
 import Chat from "./sideContent/ChatComponent/Chat";
 import Community from "./sideContent/Group/Group";
-import CommunityImage from "./sideContent/Group/communityImage";
 import Status from "./sideContent/Status/Status";
 import Channel from "./sideContent/Channel/Channel";
 import Archive from "./sideContent/Archive/Archive";
@@ -41,7 +40,6 @@ export{
     SideSettings,
     Chat,
     Community,
-    CommunityImage,
     Status,
     Channel,
     Archive,

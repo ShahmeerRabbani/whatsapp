@@ -1,0 +1,14 @@
+ <svg
+          viewBox="0 0 24 24"
+          height="24"
+          width="24"
+          preserveAspectRatio="xMidYMid meet"
+          className=""
+          fill="none"
+        >
+          <title>settings-blocked</title>
+          <path
+            d="M12 2.3C6.7 2.3 2.3 6.6 2.3 12C2.3 17.4 6.6 21.7 12 21.7C17.4 21.7 21.7 17.4 21.7 12C21.7 6.6 17.3 2.3 12 2.3ZM4.7 12C4.7 8 8 4.7 12 4.7C13.6 4.7 15.1 5.2 16.3 6.1L6.1 16.3C5.2 15.1 4.7 13.6 4.7 12ZM12 19.3C10.4 19.3 9 18.8 7.8 17.9L17.9 7.8C18.8 9 19.3 10.4 19.3 12C19.3 16 16 19.3 12 19.3Z"
+            fill="currentColor"
+          ></path>
+        </svg>

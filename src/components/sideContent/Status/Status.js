@@ -129,10 +129,8 @@ function Status({ fakeChatData }) {
                   gap: 5,
                 }}
               >
-                {" "}
                 <FaLock size={11} /> Your status updates are
                 <span style={{ color: "#027EC6", cursor: "pointer" }}>
-                  {" "}
                   end-to-end encrypted
                 </span>
               </span>
