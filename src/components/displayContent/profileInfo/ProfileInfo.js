@@ -1,5 +1,4 @@
 import React from "react";
-import { profile } from "../../../images";
 import { BellIcon, BlockIcon, CrossIcon, DeleteIcon, DisappearingIcon, LockIcon, RightArrow, StarFillIcon, UnlikeIcon } from "../../Assets";
 
 function ProfileInformation({ isProfileShow, selectedMessage, handleShowProfile }) {

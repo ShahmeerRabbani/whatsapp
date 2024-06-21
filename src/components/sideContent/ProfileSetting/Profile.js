@@ -1,4 +1,5 @@
 import React from "react";
+import profile from '../../../images/profile.jpeg'
 import { PencilIcon } from "../../Assets";
 
 function ProfileSetting() {
@@ -9,7 +10,16 @@ function ProfileSetting() {
           <span style={{ fontSize: 22, fontWeight: 700, marginLeft: 25 }}>Profile</span>
         </div>
         <div className="Main_profile_imageDiv">
-          <div className="profile_imageDiv"></div>
+          <div className="profile_imageDiv">
+          <img
+              src={profile}
+              style={{
+                objectFit: "cover",
+                height: "-webkit-fill-available",
+                width: "-webkit-fill-available",
+              }}
+            />
+          </div>
         </div>
         <div className="Main_profile_nameDiv">
           <div className="name_title">

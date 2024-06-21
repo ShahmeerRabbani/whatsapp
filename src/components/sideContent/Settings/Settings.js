@@ -5,6 +5,7 @@ import PrivacyPage from "./Privacy/Privacy";
 import NotificationPage from "./Notification/Notification";
 import KeyboardPage from "./Keyboard/Keyboard";
 import HelpPage from "./Help/Help";
+import profile from '../../../images/profile.jpeg'
 import { AccountIcon, BellIcon, ChatFillIcon, HelpIcon, KeyboardIcon, LockIcon, LogOutIcon, SearchIcon } from "../../Assets";
 
 function Settings() {
@@ -108,7 +109,16 @@ function Settings() {
           <div className="Settings_Option">
             <div className="Settings_firstLine">
               <div className="Settings_FirstLine_profile">
-                <div className="Settings_Dp"></div>
+                <div className="Settings_Dp">
+                <img
+              src={profile}
+              style={{
+                objectFit: "cover",
+                height: "-webkit-fill-available",
+                width: "-webkit-fill-available",
+              }}
+            />
+                </div>
               </div>
               <div className="Settings_FirstLine_About">
                 <span>🖤</span>

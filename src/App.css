@@ -473,6 +473,7 @@
   width: 200px;
   border-radius: 50%;
   background-color: #54656f;
+  overflow: hidden;
 
 }
 
@@ -616,6 +617,7 @@
   height: 80px;
   width: 80px;
   border-radius: 50%;
+  overflow: hidden;
   background-color: var(--tertiary-color);
 }
 .Settings_FirstLine_About{
