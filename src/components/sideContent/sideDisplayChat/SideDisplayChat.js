@@ -23,17 +23,24 @@ import {
   chatProfileThirteen,
   chatProfileTwelve,
   profile,
-} from "../../../images";
+} from "../../Assets/images";
 import ProfileSetting from "../ProfileSetting/Profile";
-function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
-
-
+function SideDisplayChat({
+  selectComponent,
+  handleDisplay,
+  onMessageClick,
+  handleWallpaper,
+  handleRemoveWallpaperPage,
+  handleHoverColor,
+  handleMouseLeave,
+  handleMouseEnter,
+  activeChild,
+}) {
   // const [settingsDisplay, setSettingsDisplay] = useState('');
-  
+
   // const handleSettingsDisplay = (componentName) => {
   //   setSettingsDisplay(componentName)
   // }
-
 
   const fakeChatData = [
     {
@@ -41,7 +48,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       name: "Shahmeer",
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
-      statusTiming:'Now',
+      statusTiming: "Now",
       image: profile,
     },
     {
@@ -50,7 +57,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileOne,
-      statusTiming:'1 minutes ago',
+      statusTiming: "1 minutes ago",
     },
     {
       id: 3,
@@ -58,7 +65,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileTwo,
-      statusTiming:'50 minutes ago',
+      statusTiming: "50 minutes ago",
     },
     {
       id: 4,
@@ -66,7 +73,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileThree,
-      statusTiming:'Now',
+      statusTiming: "Now",
     },
     {
       id: 5,
@@ -74,7 +81,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileFour,
-      statusTiming:'20 minutes ago',
+      statusTiming: "20 minutes ago",
     },
     {
       id: 6,
@@ -82,7 +89,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileFive,
-      statusTiming:'Yesterday 7:00 AM',
+      statusTiming: "Yesterday 7:00 AM",
     },
     {
       id: 7,
@@ -90,7 +97,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileSix,
-      statusTiming:'40 minutes ago',
+      statusTiming: "40 minutes ago",
     },
     {
       id: 8,
@@ -98,7 +105,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileSeven,
-      statusTiming:'Yesterday 3:20 PM',
+      statusTiming: "Yesterday 3:20 PM",
     },
     {
       id: 9,
@@ -106,7 +113,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileEight,
-      statusTiming:'Today 1:20 PM',
+      statusTiming: "Today 1:20 PM",
     },
     {
       id: 10,
@@ -114,7 +121,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: chatProfileNine,
-      statusTiming:'Now',
+      statusTiming: "Now",
     },
     {
       id: 11,
@@ -122,7 +129,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileTen,
-      statusTiming:'Today 8:20 PM',
+      statusTiming: "Today 8:20 PM",
     },
     {
       id: 12,
@@ -130,7 +137,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: ChatProfileEleven,
-      statusTiming:'Yesterday 5:50 PM',
+      statusTiming: "Yesterday 5:50 PM",
     },
     {
       id: 13,
@@ -138,7 +145,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: chatProfileTwelve,
-      statusTiming:'Today 3:20 PM',
+      statusTiming: "Today 3:20 PM",
     },
     {
       id: 14,
@@ -146,7 +153,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: chatProfileThirteen,
-      statusTiming:'Today 2:40 AM',
+      statusTiming: "Today 2:40 AM",
     },
     {
       id: 15,
@@ -154,7 +161,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: chatProfileFourteen,
-      statusTiming:'Yesterday 3:12 PM',
+      statusTiming: "Yesterday 3:12 PM",
     },
     {
       id: 16,
@@ -162,7 +169,7 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
       message: "Dear BanoQabil Karachi Student!",
       time: "Saturday",
       image: chatProfileFifteen,
-      statusTiming:'10 minutes ago',
+      statusTiming: "10 minutes ago",
     },
   ];
 
@@ -177,11 +184,22 @@ function SideDisplayChat({ selectComponent, handleDisplay, onMessageClick }) {
           />
         )}
         {selectComponent === "Group" && <Group />}
-        {selectComponent === "StatusBtn" && <Status fakeChatData={fakeChatData}/>}
+        {selectComponent === "StatusBtn" && (
+          <Status fakeChatData={fakeChatData} />
+        )}
         {selectComponent === "Channel" && <Channel />}
         {selectComponent === "Archive" && <Archive />}
         {selectComponent === "Star" && <Star />}
-        {selectComponent === "Settings" && <Settings/>}
+        {selectComponent === "Settings" && (
+          <Settings
+            handleWallpaper={handleWallpaper}
+            handleRemoveWallpaperPage={handleRemoveWallpaperPage}
+            handleHoverColor={handleHoverColor}
+            handleMouseLeave={handleMouseLeave}
+            handleMouseEnter={handleMouseEnter}
+            activeChild={activeChild}
+          />
+        )}
         {selectComponent === "profile_Dp" && <ProfileSetting />}
       </div>
     </>

@@ -1,11 +1,22 @@
 import React, { useState } from "react";
 import { BsChatLeftText } from "react-icons/bs";
-import { profile } from "../../../images";
-import { ArchiveIcon, ChannelIcon, ChatIcon, CommunityIcon, SettingIcon, StarIcon, StatusIcon } from "../../Assets";
+import { profile } from "../../Assets/images";
+import { ArchiveIcon, ChannelIcon, ChatIcon, ChatFillIcon, CommunityIcon, SettingIcon, StarIcon, StatusIcon } from "../../Assets";
 
-function SideSettings({ handleButtonClick }) {
+function SideSettings({ handleButtonClick, handleRemoveWallpaperPage }) {
   const handleNavigate = (componentName) => {
     handleButtonClick(componentName);
+
+    // if(componentName !== 'Settings' && componentName !== 'AnotherComponent'){
+    //   return;
+    // }
+
+    if(componentName === "Settings"){
+      return;
+    }
+    else{
+      handleRemoveWallpaperPage(false);
+    }
   };
 
   return (

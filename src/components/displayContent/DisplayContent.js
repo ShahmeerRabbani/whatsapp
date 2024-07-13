@@ -1,23 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { profile } from "../../images";
 import { IoIosArrowDown } from "react-icons/io";
 import ChatSettings from "./Chat_settings/ChatSetting";
 import FirstDisplay from "./firstDisplay/FirstDisplay";
-import { DotsIcon, IconsIcon, MicrophoneIcon, PlusIcon, SearchIcon, VideoIcon } from "../Assets";
+import {
+  DotsIcon,
+  IconsIcon,
+  MicrophoneIcon,
+  PlusIcon,
+  SearchIcon,
+  VideoIcon,
+} from "../Assets";
+import WallpaperDisplay from "./wallpaperDisplay/WallpaperDisplay";
 
-function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
+function DisplayContent({
+  chatDisplay,
+  selectedMessage,
+  handleShowProfile,
+  isWallpaper,
+  hoverColor,
+  backgroundHoverColor,
+  doodlesOpacity,
+}) {
   const [isClose, setIsClose] = useState(false);
 
   const handleOpenClose = () => {
     setIsClose(!isClose);
   };
 
+  if (isWallpaper) {
+    return (
+      <WallpaperDisplay
+        hoverColor={hoverColor}
+        backgroundHoverColor={backgroundHoverColor}
+        doodlesOpacity={doodlesOpacity}
+      />
+    );
+  }
+
   return (
     <>
       <div className="display_content">
         {chatDisplay ? (
-          <article>
-            <div className="background"></div>
+          <article style={{backgroundColor: backgroundHoverColor}}>
+            <div className="background" style={{opacity: doodlesOpacity}}></div>
             <header>
               <div className="header_Dp">
                 <img
@@ -31,7 +56,9 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
               </div>
               <div className="header_name" onClick={handleShowProfile}>
                 <span>{selectedMessage.name}</span>
-                <span style={{fontSize: 14, color: '#54656F', }}>click here for contact info</span>
+                <span style={{ fontSize: 14, color: "#54656F" }}>
+                  click here for contact info
+                </span>
               </div>
               <div className="header_settings">
                 <div
@@ -42,7 +69,7 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
                   }}
                 >
                   <span>
-                   <VideoIcon/>
+                    <VideoIcon />
                   </span>
                   <span>
                     <IoIosArrowDown />
@@ -50,7 +77,7 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
                 </div>
                 <div className="headSearch" style={{ cursor: "pointer" }}>
                   <span>
-                    <SearchIcon style={{height: 30, width: 30}}/>
+                    <SearchIcon style={{ height: 30, width: 30 }} />
                   </span>
                 </div>
                 <div
@@ -59,24 +86,22 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
                   style={{ backgroundColor: isClose ? "#D9DBDF" : "" }}
                 >
                   <span>
-                   <DotsIcon/>
+                    <DotsIcon />
                   </span>
                 </div>
               </div>
             </header>
-            <main>
-              
-            </main>
+            <main></main>
             <footer>
               <div className="footer_option">
                 <div>
                   <span>
-                    <IconsIcon/>
+                    <IconsIcon />
                   </span>
                 </div>
                 <div>
                   <span>
-                   <PlusIcon/>
+                    <PlusIcon />
                   </span>
                 </div>
               </div>
@@ -86,7 +111,7 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
                 </div>
                 <div className="foot_microphone">
                   <span>
-                   <MicrophoneIcon/>
+                    <MicrophoneIcon />
                   </span>
                 </div>
               </div>
@@ -96,7 +121,7 @@ function DisplayContent({ chatDisplay, selectedMessage, handleShowProfile }) {
             </div>
           </article>
         ) : (
-         <FirstDisplay />
+          <FirstDisplay />
         )}
       </div>
     </>

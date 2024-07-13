@@ -1,5 +1,5 @@
 import React from "react";
-import profile from '../../../images/profile.jpeg'
+import {profile} from '../../Assets/images/index'
 import { PencilIcon } from "../../Assets";
 
 function ProfileSetting() {

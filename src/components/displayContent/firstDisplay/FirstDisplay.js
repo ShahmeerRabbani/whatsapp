@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateComputer, whatsAppComputer } from '../../../images';
+import { updateComputer, whatsAppComputer } from '../../Assets/images';
 import { FaLock } from 'react-icons/fa6';
 
 function FirstDisplay() {

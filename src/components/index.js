@@ -18,6 +18,10 @@ import Star from "./sideContent/Star/Star";
 import Settings from "./sideContent/Settings/Settings";
 import AccountPage from "./sideContent/Settings/Account/Account";
 import ChatPage from "./sideContent/Settings/Chat/Chat_page";
+import Wallpaper from "./sideContent/Settings/Chat/wallpaper/Wallpaper"
+import Theme from "./sideContent/Settings/Chat/theme/Theme"
+import WallpaperDisplay from "./displayContent/wallpaperDisplay/WallpaperDisplay";
+
 import PrivacyPage from "./sideContent/Settings/Privacy/Privacy";
 import NotificationPage from "./sideContent/Settings/Notification/Notification";
 import KeyboardPage from "./sideContent/Settings/Keyboard/Keyboard";
@@ -47,6 +51,9 @@ export{
     Settings,
     AccountPage,
     ChatPage,
+    Wallpaper,
+    Theme,
+    WallpaperDisplay,
     PrivacyPage,
     NotificationPage,
     HelpPage,

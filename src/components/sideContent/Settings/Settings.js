@@ -5,10 +5,26 @@ import PrivacyPage from "./Privacy/Privacy";
 import NotificationPage from "./Notification/Notification";
 import KeyboardPage from "./Keyboard/Keyboard";
 import HelpPage from "./Help/Help";
-import profile from '../../../images/profile.jpeg'
-import { AccountIcon, BellIcon, ChatFillIcon, HelpIcon, KeyboardIcon, LockIcon, LogOutIcon, SearchIcon } from "../../Assets";
+import { profile } from "../../Assets/images/index";
+import {
+  AccountIcon,
+  BellIcon,
+  ChatFillIcon,
+  HelpIcon,
+  KeyboardIcon,
+  LockIcon,
+  LogOutIcon,
+  SearchIcon,
+} from "../../Assets";
 
-function Settings() {
+function Settings({
+  handleWallpaper,
+  handleRemoveWallpaperPage,
+  handleHoverColor,
+  handleMouseLeave,
+  handleMouseEnter,
+  activeChild,
+}) {
   const [isStyle, setIsStyle] = useState({});
   const [secondStyle, setSecondStyle] = useState({});
   const [showSecondComponent, setShowSecondComponent] = useState("");
@@ -41,7 +57,7 @@ function Settings() {
     {
       id: 1,
       name: "Account",
-      icon: <AccountIcon/>,
+      icon: <AccountIcon />,
       EventClick: () => handleShowComponent("Account"),
     },
     {
@@ -53,25 +69,25 @@ function Settings() {
     {
       id: 3,
       name: "Chats",
-      icon: <ChatFillIcon/>,
+      icon: <ChatFillIcon />,
       EventClick: () => handleShowComponent("Chats"),
     },
     {
       id: 4,
       name: "Notification",
-      icon: <BellIcon/>,
+      icon: <BellIcon />,
       EventClick: () => handleShowComponent("Notification"),
     },
     {
       id: 5,
       name: "Keyboard shortcut",
-      icon: <KeyboardIcon/>,
+      icon: <KeyboardIcon />,
       EventClick: () => handleShowComponent("Keyboard"),
     },
     {
       id: 6,
       name: "Help",
-      icon: <HelpIcon/>,
+      icon: <HelpIcon />,
       EventClick: () => handleShowComponent("Help"),
     },
     {
@@ -80,7 +96,7 @@ function Settings() {
       style: {
         color: "#EA0038",
       },
-      icon: <LogOutIcon style={{color: "#EA0038"}}/>,
+      icon: <LogOutIcon style={{ color: "#EA0038" }} />,
     },
   ];
   return (
@@ -110,14 +126,14 @@ function Settings() {
             <div className="Settings_firstLine">
               <div className="Settings_FirstLine_profile">
                 <div className="Settings_Dp">
-                <img
-              src={profile}
-              style={{
-                objectFit: "cover",
-                height: "-webkit-fill-available",
-                width: "-webkit-fill-available",
-              }}
-            />
+                  <img
+                    src={profile}
+                    style={{
+                      objectFit: "cover",
+                      height: "-webkit-fill-available",
+                      width: "-webkit-fill-available",
+                    }}
+                  />
                 </div>
               </div>
               <div className="Settings_FirstLine_About">
@@ -180,7 +196,15 @@ function Settings() {
             <PrivacyPage handleBackButton={handleBackButton} />
           )}
           {showSecondComponent === "Chats" && (
-            <ChatPage handleBackButton={handleBackButton} />
+            <ChatPage
+              handleBackButton={handleBackButton}
+              handleWallpaper={handleWallpaper}
+              handleRemoveWallpaperPage={handleRemoveWallpaperPage}
+              handleHoverColor={handleHoverColor}
+              handleMouseLeave={handleMouseLeave}
+              handleMouseEnter={handleMouseEnter}
+              activeChild={activeChild}
+            />
           )}
           {showSecondComponent === "Notification" && (
             <NotificationPage handleBackButton={handleBackButton} />

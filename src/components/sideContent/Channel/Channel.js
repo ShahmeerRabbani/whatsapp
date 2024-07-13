@@ -1,6 +1,6 @@
 import React from "react";
-import profile from '../../../images/profile.jpeg'
-import { MarkZuckerberg, callOfDuty, UEFA, worldHealth, Billie } from "../../../images";
+import profile from '../../Assets/images'
+import { MarkZuckerberg, callOfDuty, UEFA, worldHealth, Billie } from '../../Assets/images';
 import { PlusIcon } from "../../Assets";
 
 function Channel() {

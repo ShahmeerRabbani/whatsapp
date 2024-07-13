@@ -533,8 +533,6 @@
   height: 100vh;
   display: flex;
   position: relative;
-  /* flex-direction: column; */
-  /* overflow: hidden; */
   }
   
   .Settings_container{
@@ -660,7 +658,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateX(100%);
+  transform: translateX(100%); 
 }
 
 
@@ -673,6 +671,12 @@
 
 /* ------------------- Chat Page  ------------------ */
 
+.Chat_Page_main{
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
 .chat_container{
   height: 100vh;
   width: 100%;
@@ -681,7 +685,6 @@
 
 .upper_chatDiv{
   height: 39%;
-  width: 100%;
   background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   padding: 0px 30px;
@@ -695,6 +698,41 @@
   margin-bottom: 15px;
 }
 
+.Theme{
+  margin-top: 40px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #E9EDEF;
+  cursor: pointer;
+}
+
+.theme-title{
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+}
+
+.theme-arrow, .wallpaper_arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.Wallpaper{
+  cursor: pointer;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wallpaper_title{
+  display: flex;
+  flex: 8;
+}
+
 .lower_chatDiv{
   height: 55%;
   width: 100%;
@@ -702,6 +740,88 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   margin-top: 10px;
 }
+
+
+/* ---------------- Wallpaper Page -------------------- */
+.wallpaper_parent{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.wallpaper_parent::-webkit-scrollbar{
+  overflow-y: hidden;
+}
+
+.wallpaper{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.Color_parent{
+  margin-top: 30px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.Color_child{
+  height: 82px;
+  width: 82px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  box-shadow:inset rgb(85, 91, 255) 0px 0px 0px 3px;
+}
+.Color_child:hover{
+  scale: 0.9;
+}
+
+
+/* --------------------Help Page ---------------------- */
+
+.Help_Page{
+  height: 100%;
+  width: 100%;
+}
+
+.Animated_image{
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.Animation_div{
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  background-image: url('https://static.whatsapp.net/rsrc.php/v3/yf/r/4l5Jzvrg84p.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: 1600% auto;
+  animation: animated 1s steps(15) infinite ;
+}
+
+@keyframes animated {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
 /* ---------------- Main Display Content ------------------ */
 
 .display_content {
@@ -858,7 +978,6 @@ header{
 .background{
   height: 100%;
   width: 100%;
-  opacity: 0.7;
   position: absolute;
   background-image: url("https://static.whatsapp.net/rsrc.php/v3/yl/r/gi_DckOUM5a.png");
 }
